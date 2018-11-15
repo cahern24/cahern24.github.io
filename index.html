@@ -5,6 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css">
     <meta name="referrer" content="origin">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,6 +29,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <a class="navbar-brand" href="#content">Cristian Hernandez</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,6 +52,7 @@
         <div class="container">
           <h1 class="masthead-heading mb-0">All About Me</h1>
           <h2 class="masthead-subheading mb-0">Enjoy this website :)</h2>
+            <p class="lead">Created by Cristian Hernandez </p>
           <a href="https://www.linkedin.com/in/cristian-hernandez-b24007147/" class="btn btn-primary btn-xl rounded-pill mt-5" target="_blank">My LinkedIn</a>
         </div>
       </div>
@@ -150,12 +153,31 @@ rows="3" id="InputMessage" name="message"></textarea>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Contact Form JavaScript -->
 <script src="js/jqBootstrapValidation.js"></script>
 <!-- <script src="js/contact_me.js"></script> -->
 
-
+<script src="/js/bootstrap.min.js"></script>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+document.getElementById("myBtn").style.display = "block";
+} else {
+document.getElementById("myBtn").style.display = "none";
+}
+}function topFunction() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+document.getElementsByClassName('lead')[0].style.color = "white";
+document.getElementsByClassName('lead')[0].style.fontSize = "2em";
+document.getElementsByClassName('lead')[0].innerHTML = 'Feel free to contact me!';
+}
+</script> 
     
       </div>
+      
     </body>
 </html>
