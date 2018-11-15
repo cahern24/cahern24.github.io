@@ -119,7 +119,8 @@
 <p class="h3" id="contact">Contact Me</p>
 <div class="container bg-white" style="margin-bottom: 20px; padding-bottom:
 10px; padding-top: 10px;">
-<form method="POST"action="https://formspree.io/cahern24@asu.edu">
+<!--form method="POST"action="https://formspree.io/cahern24@asu.edu"-->
+<form id="add-user-input">
 <div class="form-group">
 <label for="inputName">Name*</label>
 <input name="First Name" type="text" class="form-control" id="inputName" placeholder=Johnny>
@@ -137,8 +138,8 @@ placeholder="Appleseed" required>
 <textarea class="form-control" id="exampleTextarea"
 rows="3" id="InputMessage" name="message"></textarea>
 </div>
-<button type="submit" class="btn btn-primary">Send</button>
-    
+<!--button type="submit" class="btn btn-primary">Send</button-->
+    <button class="btn btn-primary">Send</button>
     </form>
     </div>
 
@@ -149,7 +150,22 @@ rows="3" id="InputMessage" name="message"></textarea>
       </div>
       <!-- /.container -->
     </footer>
-
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAfJD4gFXNd8g7bWas6pVQK3MioaNg-lb8",
+    authDomain: "cristiansapp-abab5.firebaseapp.com",
+    databaseURL: "https://cristiansapp-abab5.firebaseio.com",
+    projectId: "cristiansapp-abab5",
+    storageBucket: "cristiansapp-abab5.appspot.com",
+    messagingSenderId: "817378671082"
+  };
+  firebase.initializeApp(config);
+    // Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+</script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -178,6 +194,6 @@ document.getElementsByClassName('lead')[0].innerHTML = 'Feel free to contact me!
 </script> 
     
       </div>
-      
+      <script src="js/addData.js"></script>
     </body>
 </html>
