@@ -59,7 +59,7 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#BE93C5), to(#7BC6CC);
+  background: -webkit-gradient(linear, left bottom, left top, from(#BE93C5), to(blue);
   background: linear-gradient(0deg, #BE93C5 0%, #7BC6CC 100%);
   background-repeat: no-repeat;
   background-position: center center;
